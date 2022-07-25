@@ -19,6 +19,11 @@ class Block {
                 this.jumping = true;
             }
         })
+        window.addEventListener('touchstart', function () {
+            if (this.y == this.canv.height) {
+                this.jumping = true;
+            }
+        })
         // Add jumping code here
         if (this.jumping) {
             this.y -= this.vel;

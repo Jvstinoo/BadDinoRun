@@ -20,6 +20,16 @@ window.onload = function () {
             player.score = 0;
         }
     })
+    window.addEventListener('touchstart', function () {
+        console.log("Game started");
+        enemy.vel = 6;
+        enemy.x = canvas.width;
+        player.vel = 8;
+        if (player.score > player.highScore)
+            player.highScore = player.score;
+        player.score = 0;
+    }
+    )
 }
 
 function drawScore() {
