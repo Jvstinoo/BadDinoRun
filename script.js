@@ -1,7 +1,7 @@
 const canvas = document.getElementById('game');
 const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = window.innerWidth * .5;
+canvas.height = window.innerHeight * .5;
 const goat = document.getElementById('goat');
 let timer = 0;
 
@@ -33,7 +33,7 @@ window.onload = function () {
 }
 
 function drawScore() {
-    if (timer % 60 == 0 && timer != 0)
+    if (timer % 10 == 0 && timer != 0)
         player.score++;
     ctx.fillStyle = 'white';
     ctx.fillText("Score: " + player.score, canvas.width - 100, 20);
@@ -63,7 +63,6 @@ function draw() {
     enemy.main();
     collision();
 }
-
 
 // Make draw run every frame
 setInterval(draw, 1000 / 60);

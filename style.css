@@ -5,8 +5,14 @@ html {
     margin: 0px;
 }
 
+#canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+}
+
 #game {
-    height: 100%;
-    width: 100%;
+    margin: auto;
     background-color: rgba(12, 17, 33, 255);
 }
